@@ -185,7 +185,7 @@ There are 2 solutions to this problem:
 1. Disable the param
    [latest-items](https://github.com/chaoss/grimoirelab-sirmordred/blob/master/sirmordred/utils/setup.cfg#L78)
    by setting it to false.
-```cfg
+```
 latest-items = false
 ```
 2. Delete the local clone of the repo (which is stored in
@@ -267,7 +267,7 @@ Solution
 
 Enable the `sleep-for-rate` parameter. It increases rate by sleeping between API
 call retries.
-```cfg
+```
 sleep-for-rate = true
 sleep-time = 300
 ```
@@ -304,7 +304,7 @@ Solution
 Change `https` to `http` in the `setup.cfg` file if you are using the
 Elasticsearch without the SearchGuard. See
 [defining-the-es-configurations](/grimoirelab-tutorial/docs/getting-started/dev-setup/#defining-the-es-configurations).
-```cfg
+```
 [es_collection]
 url = http://localhost:9200
 

@@ -31,8 +31,8 @@ date values, `display` is the title thay will be displayed in kibiter and
 `section` defines the column where the quickRange will be added.
 
 **Note: You need to be logged in to save your custom time picker. Check the
-[private and public access](/docs/dashboards/access) section
-to understand about permissions in GrimoireLab dashboards.**
+[private and public access](/docs/dashboards/access) section to understand about
+permissions in GrimoireLab dashboards.**
 
 ```
 {
@@ -72,5 +72,5 @@ other data except the one mentioned.
 - Once you've set your values, save it and the visualizations should re-ajust to
   fit your filter.
 
-![save fields](./assets/save-fields.png)
-![filter active](./assets/filter-active.png)
+![save fields](./assets/save-fields.png) ![filter
+active](./assets/filter-active.png)

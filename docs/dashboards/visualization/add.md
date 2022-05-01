@@ -29,8 +29,8 @@ choice since the user will have an idea of what it should look like.
 1. Navigate to the `Visualize` dashboard. You can do so by clicking on the
    `Visualize` icon in the sidebar. It's the second icon from the top.
 2. Once you have the above open, click on the `+` icon to open up the
-   visualization types panel.
-   ![visualization type](./assets/visualization-type.png)
+   visualization types panel. ![visualization
+   type](./assets/visualization-type.png)
 3. Pick the visualization of your choice based on your preference.
 
 ## How to choose an index ?
@@ -48,8 +48,7 @@ generate your index-pattern
 
 ## Making the visualization
 
-We need to understand two important terms here,
-**Buckets** and **Metrics**
+We need to understand two important terms here, **Buckets** and **Metrics**
 
 ### Metrics
 Metrics in the visualization interface will refer to a single number for each

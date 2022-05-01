@@ -14,37 +14,51 @@ SortingHat provides several filters which can be used to filter through the
 lists of individuals to find the required one. You can filter through the
 profiles according to the following filters.
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">isBot</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">isBot</code>
 
-  Filter profiles marked as bots. For example `isBot: true` will return all profiles marked as bot and vice versa.
+  Filter profiles marked as bots. For example `isBot: true` will return all
+  profiles marked as bot and vice versa.
 
   ![is-bot](../assets/is-bot.png)
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">isLocked</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">isLocked</code>
   
-  Filter profiles marked as locked. For example `isLocked: true` will return all profiles marked as locked and vice versa.
+  Filter profiles marked as locked. For example `isLocked: true` will return all
+  profiles marked as locked and vice versa.
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">country</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">country</code>
 
-  Filter profiles according to country of residence. For example `country: "United States of America` or `country: USA` return individuals from the United States.
+  Filter profiles according to country of residence. For example `country:
+  "United States of America` or `country: USA` return individuals from the
+  United States.
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">gender</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">gender</code>
 
   Filter profiles based on their gender. For example `gender: non binary`
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">source</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">source</code>
 
   Filter profiles based on data source. For example `source: Github`
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">enrollment</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">enrollment</code>
 
   Filter profiles based on organizations. For example `enrollment: "Bitergia"`
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">isEnrolled</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">isEnrolled</code>
 
-  Filter profiles based on enrollment status. For example `isEnrolled: true` will return all profiles currently enrolled at some organization and vice versa
+  Filter profiles based on enrollment status. For example `isEnrolled: true`
+  will return all profiles currently enrolled at some organization and vice
+  versa
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">enrollmentDate</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">enrollmentDate</code>
 
   Filter profiles based on when they were affiliated to an organization.
 
@@ -56,7 +70,8 @@ profiles according to the following filters.
   | `enrollmentDate:<=YYYY-MM-DD`           | Matches individuals that were affiliated to an organization on or before the given date. |
   | `enrollmentDate:YYYY-MM-DD..YYYY-MM-DD` | Matches individuals that were affiliated to an organization between the given dates      |
 
-- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem; font-size:15px;">lastUpdated</code>
+- <code style="background-color: #FBE5E1; color: #C0341D; padding: 0 0.4rem;
+  font-size:15px;">lastUpdated</code>
 
   Filter profiles based on when they were last updated.
 

@@ -13,8 +13,8 @@ has_toc: false
 action.
 
 Steps
-1. Click on the `Dashboard` icon in the sidebar. It is the third icon from
-   the top.
+1. Click on the `Dashboard` icon in the sidebar. It is the third icon from the
+   top.
 2. Search for the dashboards to be removed and check the checkboxes.
 3. Click on the `Delete Selected` button to delete the dashboard.
 

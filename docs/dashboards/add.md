@@ -37,4 +37,4 @@ button. Make sure you're logged in before saving the dashboard.
 **Note: You need to be logged in to perform this action**
 
 You can learn more about the different accesses and the permissions associated
-with them in the [Private and Public Access](docs/dashboards/access) section
+with them in the [Private and Public Access](docs/dashboards/access) section.

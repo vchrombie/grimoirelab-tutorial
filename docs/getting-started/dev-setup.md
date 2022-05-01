@@ -231,7 +231,7 @@ and
   required. You are also expected to update the configurations in the
   `setup.cfg` file.
 
-```cfg
+```
 [es_collection]
 url = https://admin:admin@localhost:9200
 
@@ -242,7 +242,7 @@ url = https://admin:admin@localhost:9200
 - For accessing Elasticsearch/Kibiter, no login credentials is required. The
   configurations in the `setup.cfg` file can be updated as below.
 
-```cfg
+```
 [es_collection]
 url = http://localhost:9200
 

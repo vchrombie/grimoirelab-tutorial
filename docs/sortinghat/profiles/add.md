@@ -34,7 +34,7 @@ In the **Add individual** dialogue,
 
 ![save-profile](../assets/save-profile.png)
 
-Note: _Organization entered need to be registered in the Organization table
+> Note: Organization entered need to be registered in the Organization table
 before completing process to add individual. If organization is not present in
 organization's table, then individual's data will be saved, **excluding the
-organization's data**._
+organization's data**.

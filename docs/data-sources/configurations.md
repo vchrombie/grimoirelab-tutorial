@@ -16,8 +16,7 @@ the list of configurations according to each data source supported down below.
 ## Table of contents
 {: .no_toc .text-delta }
 
-1. TOC
-{:toc}
+1. TOC {:toc}
 
 ---
 
@@ -383,7 +382,8 @@ author_field = author_uuid
 
 Commits from Git
 
-**Note:** If you want to analyze private git repositories, make sure you pass the credentials directly in the URL.
+**Note:** If you want to analyze private git repositories, make sure you pass
+the credentials directly in the URL.
 
 - projects.json
 

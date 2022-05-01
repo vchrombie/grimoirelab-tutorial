@@ -10,8 +10,8 @@ has_toc: false
 
 # Edit a visualization
 
-In order to edit a visualization and save it, you need to be [logged
-in]({{ site.baseurl }}{% link docs/dashboards/access.md %}).
+In order to edit a visualization and save it, you need to be [logged in]({{
+site.baseurl }}{% link docs/dashboards/access.md %}).
 - Steps
     1. Click on `Edit` in the navigation bar of GrimoireLab.
     2. Click on the `Settings` icon of the dashboard. This will open a dropdown.

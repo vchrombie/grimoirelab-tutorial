@@ -17,6 +17,8 @@ SortingHat does provide a way to un-merge profiles and it comes in as the
 
   ![expand](../assets/expand.png)
 
-- You have the option to <span style="color:#2986cc">split all</span> of the identities or <span style="color:#f44336">specifically pick</span> the identity to be un-merged.
+- You have the option to <span style="color:#2986cc">split all</span> of the
+  identities or <span style="color:#f44336">specifically pick</span> the
+  identity to be un-merged.
 
   ![un-merge](../assets/un-merge.png)
