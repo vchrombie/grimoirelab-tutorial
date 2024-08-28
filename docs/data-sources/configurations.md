@@ -14,6 +14,7 @@ the list of configurations according to each data source supported down below.
 ---
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
@@ -27,7 +28,7 @@ Questions and answers from Askbot site
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "askbot": [
@@ -51,7 +52,7 @@ Bugs from Bugzilla
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "bugzilla": [
@@ -67,9 +68,13 @@ Bugs from Bugzilla
 [bugzilla]
 raw_index = bugzilla_raw
 enriched_index = bugzilla_enriched
-backend-user = yyyy # (optional)
-backend-password = xxxx # (optional)
-no-archive = true # (suggested)
+
+# optional settings
+backend-user = yyyy
+backend-password = xxxx
+
+# suggested settings
+no-archive = true
 ```
 
 ## bugzillarest
@@ -78,7 +83,7 @@ Bugs from Bugzilla server (>=5.0) using its REST API
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "bugzillarest": [
@@ -94,9 +99,13 @@ Bugs from Bugzilla server (>=5.0) using its REST API
 [bugzillarest]
 raw_index = bugzillarest_raw
 enriched_index = bugzillarest_enriched
-backend-user = yyyy # (optional)
-backend-password = xxxx # (optional)
-no-archive = true # (suggested)
+
+# optional settings
+backend-user = yyyy
+backend-password = xxxx
+
+# suggested settings
+no-archive = true
 ```
 
 ## cocom
@@ -107,7 +116,7 @@ https://github.com/chaoss/grimoirelab-graal#how-to-installcreate-the-executables
 
 - projects.json
 
-```
+```json
 {
     "Chaoss":{
         "cocom": [
@@ -135,7 +144,7 @@ Code license backend.
 
 - projects.json
 
-```
+```json
 {
     "Chaoss":{
         "colic": [
@@ -164,7 +173,7 @@ contents from Confluence
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "confluence": [
@@ -180,7 +189,9 @@ contents from Confluence
 [confluence]
 raw_index = confluence_raw
 enriched_index = confluence_enriched
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## crates
@@ -189,7 +200,7 @@ packages from Crates.io
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "crates": [
@@ -213,7 +224,7 @@ Topics from Discourse
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "discourse": [
@@ -229,7 +240,9 @@ Topics from Discourse
 [discourse]
 raw_index = discourse_raw
 enriched_index = discourse_enriched
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## dockerhub
@@ -238,7 +251,7 @@ Repositories info from DockerHub
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "dockerhub": [
@@ -254,7 +267,9 @@ Repositories info from DockerHub
 [dockerhub]
 raw_index = dockerhub_raw
 enriched_index = dockerhub_enriched
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## dockerdeps
@@ -264,7 +279,7 @@ https://github.com/crossminer/crossJadolint
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "dockerdeps": [
@@ -292,7 +307,7 @@ https://github.com/crossminer/crossJadolint
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "dockersmells": [
@@ -319,7 +334,7 @@ Tests from functest
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "functest": [
@@ -335,7 +350,9 @@ Tests from functest
 [functest]
 raw_index = functest_raw
 enriched_index = functest_enriched
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## gerrit
@@ -346,7 +363,7 @@ You have to add your public key in the gerrit server.
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "gerrit": [
@@ -363,18 +380,25 @@ You have to add your public key in the gerrit server.
 raw_index = gerrit_raw
 enriched_index = gerrit_enriched
 user = xxxx
-no-archive = true # (suggested)
-blacklist-ids = [] # (optional)
-max-reviews = 500 # (optional)
-studies = [enrich_demography:gerrit, enrich_onion:gerrit, enrich_demography_contribution:gerrit] # (optional)
 
-[enrich_demography:gerrit] # (optional)
+# suggested settings
+no-archive = true
 
-[enrich_onion:gerrit] # (optional)
+# optional settings
+blacklist-ids = []
+max-reviews = 500
+studies = [enrich_demography:gerrit, enrich_onion:gerrit, enrich_demography_contribution:gerrit]
+
+# optional section
+[enrich_demography:gerrit]
+
+# optional section
+[enrich_onion:gerrit]
 in_index = gerrit_enriched
 out_index = gerrit-onion_enriched
 
-[enrich_demography_contribution:gerrit] # (optional)
+# optional section
+[enrich_demography_contribution:gerrit]
 date_field = grimoire_creation_date
 author_field = author_uuid
 ```
@@ -387,7 +411,7 @@ Commits from Git
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "git": [
@@ -404,19 +428,27 @@ Commits from Git
 [git]
 raw_index = git_raw
 enriched_index = git_enriched
-latest-items = true # (suggested)
-studies = [enrich_demography:git, enrich_git_branches:git, enrich_areas_of_code:git, enrich_onion:git, enrich_extra_data:git] # (optional)
 
-[enrich_demography:git] # (optional)
+# suggested settings
+latest-items = true
 
-[enrich_git_branches:git] # (optional)
-run_month_days = [1, 23] # (optional)
+# optional settings
+studies = [enrich_demography:git, enrich_git_branches:git, enrich_areas_of_code:git, enrich_onion:git, enrich_extra_data:git]
 
-[enrich_areas_of_code:git] # (optional)
+# optional section
+[enrich_demography:git]
+
+# optional section
+[enrich_git_branches:git]
+run_month_days = [1, 23]
+
+# optional section
+[enrich_areas_of_code:git]
 in_index = git_raw
 out_index = git-aoc_enriched
 
-[enrich_onion:git] # (optional)
+# optional section
+[enrich_onion:git]
 in_index = git_enriched
 out_index = git-onion_enriched
 
@@ -435,7 +467,7 @@ Issues and PRs from GitHub
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "github:issue": [
@@ -455,25 +487,32 @@ enriched_index = github_enriched
 api-token = xxxx
 category = issue
 sleep-for-rate = true
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
+
+# optional settings
 studies = [enrich_onion:github,
            enrich_geolocation:user,
            enrich_geolocation:assignee,
            enrich_extra_data:github,
            enrich_backlog_analysis,
-           enrich_demography:github] # (optional)
+           enrich_demography:github]
 
-[enrich_onion:github] # (optional)
+# optional section
+[enrich_onion:github]
 in_index_iss = github_issues_onion-src
 in_index_prs = github_prs_onion-src
 out_index_iss = github-issues-onion_enriched
 out_index_prs = github-prs-onion_enriched
 
-[enrich_geolocation:user] # (optional)
+# optional section
+[enrich_geolocation:user]
 location_field = user_location
 geolocation_field = user_geolocation
 
-[enrich_geolocation:assignee] # (optional)
+# optional section
+[enrich_geolocation:assignee]
 location_field = assignee_location
 geolocation_field = assignee_geolocation
 
@@ -493,7 +532,7 @@ map_label = [others, bugs, enhancements]
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "github:pull": [
@@ -513,11 +552,15 @@ enriched_index = github-pull_enriched
 api-token = xxxx
 category = pull_request
 sleep-for-rate = true
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
+
+# optional settings
 studies = [enrich_geolocation:user,
            enrich_geolocation:assignee,
            enrich_extra_data:github,
-           enrich_demography:github] # (optional)
+           enrich_demography:github]
 
 [enrich_geolocation:user]
 location_field = user_location
@@ -539,7 +582,7 @@ The number of forks, starts, and subscribers in the repository.
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "github:repo": [
@@ -559,7 +602,11 @@ enriched_index = github-repo_enriched
 api-token = xxxx
 category = repository
 sleep-for-rate = true
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
+
+# optional settings
 studies = [enrich_extra_data:github, enrich_demography:github]
 
 [enrich_extra_data:github]
@@ -577,7 +624,7 @@ The corresponding dashboards can be automatically uploaded by setting
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "githubql": [
@@ -598,9 +645,13 @@ raw_index = github_event_raw
 enriched_index = github_event_enriched
 api-token = xxxxx
 sleep-for-rate = true
-sleep-time = "300" # (optional)
-no-archive = true # (suggested)
-studies = [enrich_duration_analysis:kanban, enrich_reference_analysis] # (optional)
+
+# suggested settings
+no-archive = true
+
+# optional settings
+sleep-time = "300"
+studies = [enrich_duration_analysis:kanban, enrich_reference_analysis]
 
 [enrich_duration_analysis:kanban]
 start_event_type = MovedColumnsInProjectEvent
@@ -614,7 +665,8 @@ target_attr = label
 fltr_attr = label
 fltr_event_types = [LabeledEvent]
 
-[enrich_reference_analysis] # (optional)
+# optional section
+[enrich_reference_analysis]
 ```
 
 ## github2
@@ -628,7 +680,7 @@ The corresponding dashboards can be automatically uploaded by setting
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "github2:issue": [
@@ -648,14 +700,20 @@ raw_index = github2-issues_raw
 enriched_index = github2-issues_enriched
 sleep-for-rate = true
 category = issue
-no-archive = true # (suggested)
-studies = [enrich_geolocation:user, enrich_geolocation:assignee, enrich_extra_data:github2, enrich_feelings] # (optional)
 
-[enrich_geolocation:user] # (optional)
+# suggested settings
+no-archive = true
+
+# optional settings
+studies = [enrich_geolocation:user, enrich_geolocation:assignee, enrich_extra_data:github2, enrich_feelings]
+
+# optional section
+[enrich_geolocation:user]
 location_field = user_location
 geolocation_field = user_geolocation
 
-[enrich_geolocation:assignee] # (optional)
+# optional section
+[enrich_geolocation:assignee]
 location_field = assignee_location
 geolocation_field = assignee_geolocation
 
@@ -671,7 +729,7 @@ nlp_rest_url = http://localhost:2901
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "github2:pull": [
@@ -691,14 +749,20 @@ raw_index = github2-pull_raw
 enriched_index = github2-pull_enriched
 sleep-for-rate = true
 category = pull_request
-no-archive = true # (suggested)
-studies = [enrich_geolocation:user, enrich_geolocation:assignee, enrich_extra_data:git, enrich_feelings] # (optional)
 
-[enrich_geolocation:user] # (optional)
+# suggested settings
+no-archive = true
+
+# optional settings
+studies = [enrich_geolocation:user, enrich_geolocation:assignee, enrich_extra_data:git, enrich_feelings]
+
+# optional section
+[enrich_geolocation:user]
 location_field = user_location
 geolocation_field = user_geolocation
 
-[enrich_geolocation:assignee] # (optional)
+# optional section
+[enrich_geolocation:assignee]
 location_field = assignee_location
 geolocation_field = assignee_geolocation
 
@@ -728,7 +792,7 @@ repository with a structure similar to this one
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "gitlab:issue": [
@@ -751,10 +815,15 @@ raw_index = gitlab-issues_raw
 enriched_index = gitlab-issues_enriched
 api-token = xxxx
 sleep-for-rate = true
-no-archive = true # (suggested)
-studies = [enrich_onion:gitlab-issue] # (optional)
 
-[enrich_onion:gitlab-issue] # (optional)
+# suggested settings
+no-archive = true
+
+# optional settings
+studies = [enrich_onion:gitlab-issue]
+
+# optional section
+[enrich_onion:gitlab-issue]
 in_index = gitlab-issues_enriched
 out_index = gitlab-issues-onion_enriched
 data_source = gitlab-issues
@@ -764,7 +833,7 @@ data_source = gitlab-issues
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "gitlab:merge": [
@@ -787,14 +856,18 @@ raw_index = gitlab-mrs_raw
 enriched_index = gitlab-mrs_enriched
 api-token = xxxx
 sleep-for-rate = true
-no-archive = true # (suggested)
-studies = [enrich_onion:gitlab-merge] # (optional)
 
-[enrich_onion:gitlab-merge] # (optional)
+# suggested settings
+no-archive = true
+
+# optional settings
+studies = [enrich_onion:gitlab-merge]
+
+# optional section
+[enrich_onion:gitlab-merge]
 in_index = gitlab-mrs_enriched
 out_index = gitlab-mrs-onion_enriched
 data_source = gitlab-merges
-
 ```
 
 ## gitter
@@ -803,7 +876,7 @@ Messages from gitter rooms
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "gitter": [
@@ -821,8 +894,12 @@ raw_index = gitter_raw
 enriched_index = gitter_enriched_raw
 api-token = xxxxx
 sleep-for-rate = true
-sleep-time = "300" # (optional)
-no-archive = true # (suggested)
+
+# optional settings
+sleep-time = "300"
+
+# suggested settings
+no-archive = true
 ```
 
 ## google_hits
@@ -831,7 +908,7 @@ Number of hits for a set of keywords from Google
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "google_hits": [
@@ -858,7 +935,7 @@ https://gist.github.com/valeriocos/ad33a0b9b2d13a8336230c8c59df3c55
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "groupsio": [
@@ -885,7 +962,7 @@ Messages from a HyperKitty
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "hyperkitty": [
@@ -909,7 +986,7 @@ Builds from a Jenkins
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "jenkins": [
@@ -925,7 +1002,9 @@ Builds from a Jenkins
 [jenkins]
 raw_index = jenkins_raw
 enriched_index = jenkins_enriched
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## jira
@@ -934,7 +1013,7 @@ Issues data from JIRA issue trackers
 
 - projects.json
 
-```
+```json
 {
     "Chaoss":{
         "jira": [
@@ -950,10 +1029,14 @@ Issues data from JIRA issue trackers
 [jira]
 raw_index = jira_raw
 enriched_index = jira_enriched
-project = JIRAPROJECT # (optional)
-no-archive = true # (suggested)
-backend-user = yyyy # (optional)
-backend-password = xxxx # (optional)
+
+# optional settings
+project = JIRAPROJECT
+backend-user = yyyy
+backend-password = xxxx
+
+# suggested settings
+no-archive = true
 ```
 
 ## kitsune
@@ -962,7 +1045,7 @@ Questions and answers from KitSune
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "kitsune": [
@@ -986,7 +1069,7 @@ Messages from Mattermost channels
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "mattermost": [
@@ -1015,7 +1098,7 @@ to "mirageos-devel".
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "mbox": [
@@ -1037,9 +1120,9 @@ enriched_index = mbox_enriched
 
 Pages and revisions from MediaWiki
 
--projects.json
+- projects.json
 
-```
+```json
 {
     "Chaoss": {
         "mediawiki": [
@@ -1055,7 +1138,9 @@ Pages and revisions from MediaWiki
 [mediawiki]
 raw_index = mediawiki_raw
 enriched_index = mediawiki_enriched
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## meetup
@@ -1068,7 +1153,7 @@ https://chaoss.github.io/grimoirelab-tutorial/gelk/meetup.html#gathering-meetup-
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "meetup": [
@@ -1087,8 +1172,12 @@ raw_index = meetup_raw
 enriched_index = meetup_enriched
 api-token = xxxx
 sleep-for-rate = true
-sleep-time = "300" # (optional)
-no-archive = true # (suggested)
+
+# optional settings
+sleep-time = "300"
+
+# suggested settings
+no-archive = true
 
 ```
 
@@ -1098,7 +1187,7 @@ Events from Mozillaclub
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "mozillaclub": [
@@ -1125,7 +1214,7 @@ monitored. In the example below, the `news.myproject.org` is the server name.
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "nntp": [
@@ -1152,7 +1241,7 @@ Issues from Pagure repositories
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "pagure": [
@@ -1170,8 +1259,12 @@ raw_index = pagure_raw
 enriched_index = pagure_enriched
 api-token = xxxx
 sleep-for-rate = true
-sleep-time = "300" # (optional)
-no-archive = true # (suggested)
+
+# optional settings
+sleep-time = "300"
+
+# suggested settings
+no-archive = true
 ```
 
 ## phabricator
@@ -1180,7 +1273,7 @@ Tasks from Phabricator
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "phabricator": [
@@ -1197,7 +1290,9 @@ Tasks from Phabricator
 raw_index = phabricator_raw
 enriched_index = phabricator_enriched
 api-token = xxxx
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## pipermail
@@ -1206,7 +1301,7 @@ Messages from Pipermail
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "pipermail": [
@@ -1230,7 +1325,7 @@ Modules and their releases from Puppet's forge
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "puppetforge": [
@@ -1252,9 +1347,9 @@ enriched_index = puppetforge_enriched
 
 Issues from Redmine
 
-- project.json
+- projects.json
 
-```
+```json
 {
     "Chaoss": {
         "redmine": [
@@ -1277,9 +1372,9 @@ api-token = XXXXX
 
 Events, people and activities from ReMo
 
-- project.json
+- projects.json
 
-```
+```json
 {
     "Chaoss": {
         "remo": [
@@ -1303,7 +1398,7 @@ Messages from Rocketchat channels
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "rocketchat": [
@@ -1322,16 +1417,18 @@ enriched_index = rocketchat_enriched
 api-token = xxxx
 sleep-for-rate = true
 user-id = xxxx
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## rss
 
 Entries from RSS feeds
 
-- project.json
+- projects.json
 
-```
+```json
 {
     "Chaoss": {
         "remo": [
@@ -1357,7 +1454,7 @@ The information needed to monitor slack channels is the channel id.
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "slack": [
@@ -1375,7 +1472,9 @@ The information needed to monitor slack channels is the channel id.
 raw_index = slack_raw
 enriched_index = slack_enriched
 api-token = xxxx
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## stackexchange
@@ -1384,7 +1483,7 @@ Questions, answers and comments from StackExchange
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "stackexchange": [
@@ -1405,7 +1504,9 @@ Questions, answers and comments from StackExchange
 raw_index = stackexchange_raw
 enriched_index = stackexchange_enriched
 api-token = xxxx
-no-archive = true # (suggested)
+
+# suggested settings
+no-archive = true
 ```
 
 ## supybot
@@ -1418,7 +1519,7 @@ the logs can be found. In the example below, the name of the channel is set to
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "supybot": [
@@ -1445,7 +1546,7 @@ https://github.com/chaoss/grimoirelab-perceval#telegram
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "telegram": [
@@ -1477,7 +1578,7 @@ obtaining a token.
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "twitter": [
@@ -1506,7 +1607,7 @@ page <instance>/accounts/profile/#api
 
 - projects.json
 
-```
+```json
 {
     "Chaoss": {
         "weblate": [
@@ -1523,9 +1624,14 @@ page <instance>/accounts/profile/#api
 raw_index = weblate_raw
 enriched_index = weblate_enriched
 api-token = XXXX
-no-archive = true # (suggested)
-sleep-for-rate = true # (suggested)
-studies = [enrich_demography:weblate] # (optional)
 
-[enrich_demography:weblate] # (optional)
+# suggested settings
+no-archive = true
+sleep-for-rate = true
+
+# optional settings
+studies = [enrich_demography:weblate]
+
+# optional section
+[enrich_demography:weblate]
 ```
